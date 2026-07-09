@@ -1,3 +1,7 @@
+---
+"Date :": 9 Jul 2026
+---
+
 # Practice
 * to enter multi lines in py terminal
 ```python
