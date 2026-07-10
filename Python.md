@@ -3,8 +3,35 @@
 ---
 
 # Practice
-* to enter multi lines in py terminal
+* To type multiline statements
+	1. Auto-continuation for blocks
+		Just start a block (if/for/def/etc.) — the prompt changes to `...` and you keep typing indented lines. Empty line ends it.
 ```python
+>>> for i in range(3):
+...     print(i)
+...     print(i*2)
+...
+```
+	2. use ;
+```python
+>>> x = 1; y = 2; print(x+y)
+```
+
+	3. Line continuation with backslash**
+
+```python
+>>> total = 1 + \
+... 2 + \
+... 3
+```
+
+	4. Wrap in parentheses/brackets** (no backslash needed)
+
+```python
+>>> total = (1 +
+... 2 +
+... 3)
+
 >>> if True: #type : at the end
 ... print("Line one") #tab then continue type
 ... print("Line two") #tab then Enter to end
@@ -14,6 +41,7 @@
 ... b
 ... c'''
 ```
+
 * use " or ' in case your sentence need to use ' or '
 ```python
 a = "I haven't picked it up"
@@ -23,6 +51,13 @@ b = 'Please "eat" this'
 # boolean
 * True or False
 * Must start with capital T & F
+
+# Casting
+* string
+```python
+a = 1
+print("This is" + str(1)) # This is 1
+```
 # comment
 # this is single line cmmt
 
@@ -68,12 +103,45 @@ hw = hello + " " + world
 printf(hw) # "hello world"
   
 ```
-
 # type()
 ```python
 
 a = "melvin"
 print(type(a))
+```
+# string
+
+* Decide/search
+```python
+print("l" in "Hello") #True
+print("la" in "Hello") #False
+print("la" in "Hello la") #True
+```
+* Length
+ ```python
+print(len("Hello World"))  #11
+ ```
+* access char in a string
+```python
+str = "Hello"
+print(str[0]) #H
+print(str[1]) #e
+
+print(str[-1]) #o last char
+print(str[-2]) #l 2nd last char
+```
+* Concatenation
+```python
+a = "abc"
+b = "efg"
+c = a + " " + b
+```
+* print var in string, use f'  '
+```python
+a = 1;
+b = "Hello";
+c = f'I am saying {b} and {a},2,3';   #f must follow with '  '
+print(c)
 ```
 # Var
 Var name cannot start with no.
