@@ -1,5 +1,5 @@
 ---
-"Date :": 10 Jul 2026
+"Date :": 15 Jul 2026
 ---
 # Practice
 * To type multiline statements
@@ -116,11 +116,21 @@ print("l" in "Hello") #True
 print("la" in "Hello") #False
 print("la" in "Hello la") #True
 ```
+* find
+```python
+str = "Hello world"
+print(str.find("world")) #6, return index of finding
+```
+* Join
+```python
+list = ['a','b']
+joined = '12'.join(list) # joined = a12b
+```
 * Length
  ```python
 print(len("Hello World"))  #11
  ```
-* access char in a string
+* access char(s) in a string
 ```python
 str = "Hello"
 print(str[0]) #H
@@ -128,6 +138,12 @@ print(str[1]) #e
 
 print(str[-1]) #o last char
 print(str[-2]) #l 2nd last char
+
+print(str[1:2]) #e print [start:stop] char, note [stop] is excluded
+print(str[1:3]) #el
+print(str[:2]) #He
+print(str[1:]) #ello , [start] is included
+print(str[::-1]) #olleH, [start:stop:step] , with step=-1, print reversely
 ```
 * Concatenation
 ```python
@@ -141,6 +157,17 @@ a = 1;
 b = "Hello";
 c = f'I am saying {b} and {a},2,3';   #f must follow with '  '
 print(c)
+```
+* Remove spaces
+* Replace string
+* Split string
+```python
+str = " heelo world "
+trimStr = str.strip() # "heelo world"
+
+ReplaceStr = str.replace("heelo", "hello") # " hello world "
+
+SplitStr = str.split() # ['heelo','world'], split into list, default based on space delimiter
 ```
 # Var
 Var name cannot start with no.
@@ -172,4 +199,22 @@ print('Range:', my_range_var) # Range: range(0, 5)
 my_list = [22, 'Hello world', 3.14, True]
 print(my_list) # [22, 'Hello world', 3.14, True]
 
+```
+
+# Windows cmds
+* Run windows cmd prompt cmd in Python shell
+```python
+exec(open("filename.py").read())  #execute a py file
+
+import os
+os.chdir(r'D:\temp')  #change dir. Must put 'r' in front
+os.listdir()  # dir
+
+```
+
+* Run py file in windows cmd prompt
+	* First we need to add this below into env. path
+		*C:\Users\admin\AppData\Local\Programs\Python\Python311\
+```python
+python abc.py
 ```
